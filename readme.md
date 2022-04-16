@@ -2,6 +2,6 @@
 
 ## Table of Content
 
-* [server](server): Revised vulnserver as the chat server
-* [GUIClient](GUIClient): A Python chat client
-* [attack](attack): Attacks against the chat server
+* [Server](Server): Revised vulnserver as the chat server
+* [Client](Client): A Python chat client
+* [Attack](Attack): Attacks against the chat server
