@@ -80,10 +80,10 @@ void queue_add(client_t* cl) {
 	switch (dwWaitResult) {
 	case WAIT_OBJECT_0:
 #ifdef DEBUG
-		printf("Obtained ghMutex\n");
+		printf("queue_add: Obtained ghMutex\n");
 #endif
 		cli_count++;
-		printf("A new client just came. %d clients now\n", cli_count);
+		printf("queue_add: A new client just came. %d clients now\n", cli_count);
 		for (int i = 0; i < MAX_CLIENTS; ++i) {
 			if (!clients[i]) {
 				clients[i] = cl;
@@ -93,11 +93,11 @@ void queue_add(client_t* cl) {
 
 		// Release ownership of the mutex object
 		if (!ReleaseMutex(ghMutex)) {
-			printf("ReleaseMutex wrong\n");    // Handle error.
+			printf("queue_add: ReleaseMutex wrong\n");    // Handle error.
 		}
 		else {
 #ifdef DEBUG
-			printf("ReleaseMutex right\n");
+			printf("queue_add: ReleaseMutex right\n");
 #endif
 		}
 
@@ -106,7 +106,7 @@ void queue_add(client_t* cl) {
 	case WAIT_ABANDONED:
 		// The thread got ownership of an abandoned mutex
 		// An indeterminate state
-		printf("WAIT_ABANDONED\n");
+		printf("queue_add: WAIT_ABANDONED\n");
 		return;
 	}
 #ifdef DEBUG
@@ -130,10 +130,10 @@ void queue_delete(client_t* cl) {
 		// The thread got ownership of the mutex
 	case WAIT_OBJECT_0:
 #ifdef DEBUG
-		printf("Obtained ghMutex\n");
+		printf("queue_delete: Obtained ghMutex\n");
 #endif
 		cli_count--;
-		printf("A client just left. %d clients now\n", cli_count);
+		printf("queue_delete: A client just left. %d clients now\n", cli_count);
 		for (int i = 0; i < MAX_CLIENTS; ++i) {
 			if (clients[i]) {
 				if (clients[i]->uid == cl->uid) {
@@ -146,11 +146,11 @@ void queue_delete(client_t* cl) {
 
 		// Release ownership of the mutex object
 		if (!ReleaseMutex(ghMutex)) {
-			printf("ReleaseMutex wrong\n");    // Handle error.
+			printf("queue_delete: ReleaseMutex wrong\n");    // Handle error.
 		}
 		else {
 #ifdef DEBUG
-			printf("ReleaseMutex right\n");
+			printf("queue_delete: ReleaseMutex right\n");
 #endif
 		}
 
@@ -159,7 +159,7 @@ void queue_delete(client_t* cl) {
 	case WAIT_ABANDONED:
 		// The thread got ownership of an abandoned mutex
 		// An indeterminate state
-		printf("WAIT_ABANDONED\n");
+		printf("queue_delete: WAIT_ABANDONED\n");
 		return;
 	}
 #ifdef DEBUG
