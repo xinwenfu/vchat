@@ -13,5 +13,7 @@ PAYLOAD = (
     b'A' * 5000
 )
 
+# the with statement can process exceptions
+# when dealing with resources like file and close resources properly
 with socket.create_connection((HOST, PORT)) as fd:
     fd.sendall(PAYLOAD)
