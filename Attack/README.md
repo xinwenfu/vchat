@@ -145,4 +145,3 @@ To enable all features of Exploit Protection of Windows, find :mag_right: at the
 
 * Virus & threat protection shall be enabled too. At the bottom-left corner of Windows screen and search "Virus". In this picture below, all those features are turned off.
 <img src="../../imgs/VirusProtection.png" width="75%">
-
