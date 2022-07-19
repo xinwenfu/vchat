@@ -141,7 +141,7 @@ First secure coding is needed to avoid buffer overflow vulnerabilities.
 
 To enable all features of Exploit Protection of Windows, find :mag_right: at the bottom-left corner of Windows screen and search "Exploit Protection".
 
-<img src="https://github.com/xinwenfu/Malware-Analysis/tree/main/imgs/WindowsExploitProtection.png" width="25%">
+<img src="Malware-Analysis/tree/main/imgs/WindowsExploitProtection.png" width="25%">
 
 * Virus & threat protection shall be enabled too. At the bottom-left corner of Windows screen and search "Virus". In this picture below, all those features are turned off.
 <img src="https://github.com/xinwenfu/Malware-Analysis/tree/main/imgs/VirusProtection.png" width="75%">
