@@ -10,6 +10,9 @@ Now compile the main program:
 gcc.exe vchat.c -o vchat.exe -lws2_32 ./libessfunc.a
 
 
+-----------
+TODO
+
 You can even compile this on a Linux machine using Wine and MinGW.  To do so, install Wine and the Windows MinGw and preface the commands above with:
 
 wine ~/.wine/drive_c/MinGW/bin/
