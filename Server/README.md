@@ -4,6 +4,8 @@ Our vulnerable chat server (vchat) is based on [vulnserver](http://thegreycorner
 - Added the chat server functionality. The chat server receives messages from clients. Each message is forwarded to all other clients.
 - CTRL+C to exit the server gracefully
 
+Click vchat.exe to start the server.
+
 How to perform chat via vchat.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/fIcf5A0CCHU/0.jpg)](https://youtu.be/fIcf5A0CCHU)
