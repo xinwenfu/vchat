@@ -1,4 +1,4 @@
-This is the chat client program talking with the vulnerable chat server. 
+This is the chat client program talking with the vulnerable chat server, i.e., vchat. 
 
 To start the chat client
 ```
