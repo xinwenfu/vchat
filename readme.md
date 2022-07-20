@@ -2,7 +2,7 @@
 
 ## Downloading
 - Click Code -> Download ZIP -> Unzip to a folder
-- If install git, use the command
+- If git is intalled on your computer, the repository can be cloned to your computer. To install with git, use the command
 ```
 git clone https://github.com/xinwenfu/vchat.git
 ```
