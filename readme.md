@@ -12,6 +12,7 @@ The vulnerable chat server (vchat) serves multile purposes
   - The repository can be downloaded to either a Linux computer such as Kali or a Windows computer to use the chat client, *client.py*.
 * [Attack](Attack): Attacks against the chat server
   - The attack code here is in Python and can be used on Linux or Windows.
+  - Refer to  <a href="https://github.com/xinwenfu/Malware-Analysis/tree/main/MetasploitNewModule">buffer overflow<a/>, <a href="https://github.com/DaintyJet/TA-GenCyber-UML-2022/tree/main/Vulnserver-Modules">DoS and DDoS</a> attack modules for Armitage and Metasploit.
 
 ## Downloading
 
