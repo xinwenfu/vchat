@@ -2,7 +2,7 @@
 
 The vulnerable chat server (vchat) serves multile purposes
 - It is a working chat server with a chat client written in Python. We use the chat server to send messages betweeen each other. For example, base64 encoded encrypted data can be sent over the chat server.
-- It is a server with various vulnerabilities that can be exploited on Windows 10/11. For example, we developed the buffer overflow, DoS and DDoS attack modules for Armitage and Metasploit. A few clicks can hack into a victim Windows running vchat.
+- It is a server with various vulnerabilities that can be exploited on Windows 10/11. For example, we developed the <a href="https://github.com/xinwenfu/Malware-Analysis/tree/main/MetasploitNewModule">buffer overflow<a/>, <a href="https://github.com/DaintyJet/TA-GenCyber-UML-2022/tree/main/Vulnserver-Modules">DoS and DDoS</a> attack modules for Armitage and Metasploit. A few clicks can hack into a victim Windows running vchat.
 
 ## Table of Content
 
