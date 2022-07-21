@@ -2,7 +2,7 @@
 
 ## Table of Content
 
-* [Server](Server): Revised vulnserver as the chat server
+* [Server](Server): Revised [vulnserver](http://thegreycorner.com/vulnserver.html) as the chat server
   - The whole repository shall be downloaded to a Windows computer to use the vulnerable chat server, *vchat.exe*.
 * [Client](Client): A Python chat client
   - The repository can be downloaded to either a Linux computer such as Kali or a Windows computer to use the chat client, *client.py*.
