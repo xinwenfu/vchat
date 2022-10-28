@@ -18,4 +18,10 @@ The *Mark* and *Copy* functionality of the console can still cause trouble if th
 
 
 ## To-Do
-1. Change the console program to a WIndows application? We then will not have the *Mark* and *Copy* issue.
+1. Makefile for easy compilation during testing [ref](https://stackoverflow.com/questions/714100/os-detecting-makefile)
+2. use preprocessor directive [ifdef](https://stackoverflow.com/questions/6649936/c-compiling-on-windows-and-linux-ifdef-switch) to make file compile with differnt code depedning on system (automatic)
+    1. Create stub program 
+    2. Test windows compilation -- does it still work
+    3. Add linux libraries to linux section (Equivalent to windows used)
+    4. Replace Windows function calls
+    5. Test  
