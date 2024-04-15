@@ -1,0 +1,8 @@
+﻿  vchat.c
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(664): warning C4715: 'ConnectionHandler': not all control paths return a value
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(45,6): warning C4273: 'EssentialFunc1': inconsistent dll linkage
+  D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.h(13,17):
+  see previous definition of 'EssentialFunc1'
+  
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(345,55): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  VChat.vcxproj -> D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\Debug\VChat.exe
