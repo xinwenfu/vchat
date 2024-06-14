@@ -1,7 +1,4 @@
-# 
-
-
-## DLL
+## DLL Configuration and Building
 1. Download Visual Studio
 2. Open Visual Studio 
 3. Click Create a new Project
@@ -116,14 +113,3 @@
     2. Open the output folder you can see where this is by looking in the properties window and configuration manager
 
         <img src="Images/I25.png">
-
-
-
-
-## Refs
-
-https://learn.microsoft.com/en-us/cpp/build/creating-precompiled-header-files?view=msvc-170
-
-https://learn.microsoft.com/en-us/cpp/assembler/inline/inline-assembler?view=msvc-170
-
-https://edgesupport.diasemi.com/hc/en-us/articles/205663464-How-to-set-up-your-Visual-Studio-project-to-build-for-x86-Hardware-platform-KB1025#:~:text=Click%20BUILD%20%3E%20CONFIGURATION%20MANAGER%20select%20the%20platform,create%20x86%20as%20a%20platform%20option%20to%20choose.

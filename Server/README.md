@@ -1,9 +1,9 @@
-
-
 # Vulnerable chat server (vchat)
 
 Our vulnerable chat server (vchat) is based on [vulnserver](http://thegreycorner.com/vulnserver.html). Here are the major changes
 - Added the chat server functionality. The chat server receives messages from clients. Each message is forwarded to all other clients.
+- Control FLow Guard Exploit.
+- Modified for compilation as part of Visual Studio project.
 - CTRL+C to exit the server gracefully
 
 Click vchat.exe to start the server.

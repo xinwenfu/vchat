@@ -1,8 +1,6 @@
-
-
-
-## EXE
-
+# EXE Configuration and Building
+0. Download Visual Studio
+0. Open Visual Studio 
 1. Create a Empty `C++` Console project
 
     <img src="Images/I1.png">
@@ -82,4 +80,14 @@
 
         <img src="Images/I15.png">
 
-5. Once you have generated the DLL  
+5. Once you have generated the DLL configure the project to look for the `.a` file at a specified path.
+   1. In `Linker -> Input -> Additional Dependencies` add *libessfunc.a* as one of the additional dependencies.
+
+        <img src="Images/I20.png">
+
+   2. In `Linker -> General -> Additional Library Directories` add the paths we can search for the *libessfunc.a* file in.
+
+        <img src="Images/I21.png">
+
+6. Build the project!
+7. For the project to run you will need to copy the DLL over to the same directory as the EXE. If you make modifications to the DLL you will need to copy it over too.
