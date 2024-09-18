@@ -1,4 +1,27 @@
 ﻿  vchat.c
-D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.h(103,6): warning C4273: 'EssentialFunc1': inconsistent dll linkage
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.h(119,6): warning C4273: 'EssentialFunc1': inconsistent dll linkage
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.h(138,20): warning C4018: '<': signed/unsigned mismatch
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.h(139,10): warning C4047: '=': 'functionpointer' differs in levels of indirection from 'functionpointer *'
 D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(355,57): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(462,28): warning C4018: '<': signed/unsigned mismatch
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(470,34): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(470,34): warning C4024: 'HeapCreate': different types for formal and actual parameter 1
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(490,24): warning C4047: 'function': 'functionpointer *' differs in levels of indirection from 'functionpointer'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(490,24): warning C4024: 'fill_array': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(498,47): warning C4018: '<': signed/unsigned mismatch
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(531,28): warning C4018: '<': signed/unsigned mismatch
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(540,34): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(540,34): warning C4024: 'HeapCreate': different types for formal and actual parameter 1
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(554,24): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(554,24): warning C4024: 'HeapFree': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(558,29): warning C4133: 'function': incompatible types - from 'char [61]' to 'const OLECHAR *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(561,24): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(561,24): warning C4024: 'HeapFree': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(575,48): warning C4018: '<': signed/unsigned mismatch
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(584,9): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'BSTR'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(585,20): warning C4133: 'function': incompatible types - from 'BSTR' to 'const char *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(520,7): warning C4101: 'bstr': unreferenced local variable
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(602,34): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(602,34): warning C4024: 'HeapCreate': different types for formal and actual parameter 1
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\VChat\vchat.c(683,22): warning C4018: '<': signed/unsigned mismatch
   VChat.vcxproj -> D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\EXE\VChat\Debug\VChat.exe

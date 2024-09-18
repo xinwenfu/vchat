@@ -104,7 +104,7 @@ void queue_delete(client_t* cl) {
 		/* Remove client from queue */
 		cli_count--;
 		printf("queue_delete: A client just left. %d clients now\r\n", cli_count);
-		fflush(stdout);
+		fflush(stdout); fflush(stdout);
 		for (int i = 0; i < MAX_CLIENTS; ++i) {
 			if (clients[i]) {
 				if (clients[i]->uid == cl->uid) {
@@ -238,7 +238,7 @@ bool checkVacancy() {
 		else {
 #ifdef DEBUG
 			printf("CheckVacnacy: ReleaseMutex success\r\n");
-			fflush(stdout);
+			//-fflush(stdout);
 #endif
 		}
 
@@ -339,30 +339,31 @@ DWORD WINAPI acceptHandler(LPVOID ptr) {
 	/* Infinate loop to accept and dispatch client connections */
 	while (1) {
 		printf("Waiting for client connections...\r\n");
-		fflush(stdout);
+		//-fflush(stdout);
 		/* Accept connections from the listen socket allocated earlier */
 		ClientSocket = accept(ListenSocket, (SOCKADDR*)&ClientAddress, &ClientAddressL);
 		if (ClientSocket == INVALID_SOCKET) {
 			if (!end_flag) {
 				printf("Accept failed with error: %d\r\n", WSAGetLastError());
-				fflush(stdout);
 			}
 			closesocket(ListenSocket);
 			WSACleanup();
+			fflush(stdout);
 			return 1;
 		}
 
 		printf("Received a client connection from %s:%u\r\n", inet_ntoa(ClientAddress.sin_addr), htons(ClientAddress.sin_port));
-		fflush(stdout);
+		//-fflush(stdout);
 
 		/* Check if max clients is reached */
 		if (!checkVacancy()) {
 			printf("<< max clients reached\r\n");
-			fflush(stdout);
+			//-fflush(stdout);
 			printf("<< reject ");
-			fflush(stdout);
+			//-fflush(stdout);
 			printf("\r\n");
 			closesocket(ClientSocket);
+			fflush(stdout);
 			continue;
 		}
 
@@ -445,7 +446,260 @@ void Function5(char* Input) {
 	strcpy(usr_auth.buff, Input);
 
 	/* Call function pointer */
-	usr_auth.tgt_func();
+	usr_auth.tgt_func(); 
+	return;
+}
+void Function6a(char* Input) {
+	int s_index, e_index;
+	int alloc_size = 40;
+	HANDLE hChunk;
+	functionpointer obj = good_function; // Allocate Function Pointer on the heap.
+	functionpointer* v_arr[ALLOC_COUNT];
+	void* allocs[ALLOC_COUNT];
+	char trgt_str[HELPER_STR_SIZE];
+
+	// Look for first instance of '*'
+	for (s_index = 0; s_index < strlen(Input) && Input[s_index] != '*'; s_index++); // Notice the ; ...
+
+	// We did not find anything...
+	if (s_index == strlen(Input))
+		return;
+
+#ifdef HEAPVULN
+	// Make the intentionally vulnerable heap...
+	HANDLE defaultHeap = HeapCreate(NULL, 0, 40000); // Windows seems to validate the default heap during LoadLibrary functions and others used in the shellcode... Using a new one as a workaround.
+#endif
+#ifndef HEAPVULN
+	HANDLE defaultHeap = GetProcessHeap(); // Windows seems to validate this... Using a new one as a workaround.
+#endif // !HEAPVULN
+
+	// Preform some number of allocations
+	for (int i = 0; i < ALLOC_COUNT; i++) {
+		hChunk = HeapAlloc(defaultHeap, 0, CHUNK_SIZE);
+		memset(hChunk, 'A', CHUNK_SIZE);
+		allocs[i] = hChunk;
+		// printf("[%d] Heap chunk in backend : 0x%08x\n", i, hChunk); // This can be commented or uncommented if desired.
+	}
+
+	// Make a hole they can fill
+	HeapFree(defaultHeap, HEAP_NO_SERIALIZE, allocs[6]);
+
+	// Fill...
+	for (int i = 0; i < ALLOC_COUNT; i++) {
+		v_arr[i] = (functionpointer*)HeapAlloc(defaultHeap, 0,sizeof(functionpointer) * alloc_size);
+		fill_array(v_arr[i], obj, alloc_size);
+	}
+
+	// Unsafe Copying
+	e_index = 0;
+
+	// You can get rid of the e_index < HELPER_STR_SIZE check if you also want this vulnerable to a 
+	// local buffer overflow...
+	for (;e_index < HELPER_STR_SIZE && s_index++ < strlen(Input) && Input[s_index] != '*'; e_index++) {
+		trgt_str[e_index] = Input[s_index];
+	}
+	Function6b(Input, trgt_str, allocs, v_arr[1]);
+	return;
+}
+
+void Function6b(char* Input, char* str_trgt, void** allocs, functionpointer* trgt) {
+	char buff_str[850];
+	
+	strncpy(buff_str, Input, 850); // Safe Copy
+
+	// Overflow. Strlen would be safe if the original copy was...
+	// In this case the malloc is only for 40 * 8 bytes not the 
+	// possible 550 (HELPER_STR_SIZE)...
+	memcpy(allocs[ALLOC_FREE - 1], str_trgt, HELPER_STR_SIZE); // We are arbitraily Copying. Could be smarter but this is vulnerable...
+
+	trgt[0](0);
+}
+
+// Leak Info
+void Function7(char* Input, SOCKET Client) {
+	BSTR bstr;
+	int s_index, e_index;
+	int alloc_size = 120;
+	HANDLE hChunk;
+	BSTR s_arr[ALLOC_COUNT/2];
+	void* allocs[ALLOC_COUNT];
+	functionpointer* tmp;
+	char trgt_str[HELPER_STR_SIZE];
+
+
+	// Look for first instance of '*'
+	for (s_index = 0; s_index < strlen(Input) && Input[s_index] != '*'; s_index++); // Notice the ; ...
+
+	// We did not find anything...
+	if (s_index == strlen(Input))
+		return;
+
+
+#ifdef HEAPVULN
+	// Make the intentionally vulnerable heap...
+	HANDLE defaultHeap = HeapCreate(NULL, 0, 40000); // Windows seems to validate the default heap during LoadLibrary functions and others used in the shellcode... Using a new one as a workaround.
+#endif
+#ifndef HEAPVULN
+	HANDLE defaultHeap = GetProcessHeap(); // Windows seems to validate this... Using a new one as a workaround.
+#endif // !HEAPVULN
+
+	// Preform some number of allocations
+	for (int i = 0; i < ALLOC_COUNT; i++) {
+		hChunk = HeapAlloc(defaultHeap, 0, alloc_size);
+		memset(hChunk, 'A', alloc_size);
+		allocs[i] = hChunk;
+		// printf("[%d] Heap chunk in backend : 0x%08x\n", i, hChunk); // This can be commented or uncommented if desired.
+	}
+	// Free 
+	HeapFree(defaultHeap, NULL, allocs[5]);
+
+	// Allocate Strings
+	for (int i = 0; i < ALLOC_COUNT/2; ++i) 
+		s_arr[i] = SysAllocString("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
+
+	// Free Allocation
+	HeapFree(defaultHeap, NULL, allocs[6]);
+
+	// Allocation Adress we want to leak
+	for (int i = 0; i < ALLOC_COUNT; i++) {
+		// We are leaking anyways
+		tmp = HeapAlloc(defaultHeap, 0, sizeof(functionpointer));
+		*tmp = queue_add;
+	}
+
+	// Unsafe Copying
+	e_index = 0;
+
+	// You can get rid of the e_index < HELPER_STR_SIZE check if you also want this vulnerable to a 
+	// local buffer overflow...
+	for (; e_index < HELPER_STR_SIZE && s_index++ < strlen(Input) && Input[s_index] != '*'; e_index++)
+		trgt_str[e_index] = Input[s_index];
+	
+	printf("Pre Size: %d\n", SysStringByteLen(s_arr[0]));
+
+	strcpy(allocs[4], trgt_str);
+
+	printf("Post Size: %d\n", SysStringByteLen(s_arr[0]));
+
+	printf("%s\n", s_arr[0]);
+	send(Client, s_arr[0], SysStringByteLen(s_arr[0]), 0);
+	
+	return;
+}
+
+// SUer Controlled Allocations
+void Function8a(char* Rcv, SOCKET Client) {
+	unsigned int s_index = 0, e_index = 0, s_cnt = 0, p_cnt = 0;
+	int  result = 0;
+	char trgt_str[HELPER_STR_SIZE];
+	char* s_ptr[20];
+	functionpointer* p_ptr[20];
+	functionpointer* tmp_pnt;
+
+
+#ifdef HEAPVULN
+	// Make the intentionally vulnerable heap...
+	HANDLE defaultHeap = HeapCreate(NULL, 0, 40000); // Windows seems to validate the default heap during LoadLibrary functions and others used in the shellcode... Using a new one as a workaround.
+#endif
+#ifndef HEAPVULN
+	HANDLE defaultHeap = GetProcessHeap(); // Windows seems to validate this... Using a new one as a workaround.
+#endif // !HEAPVULN
+
+	// Send message asking user what they want us to do
+	send(Client, "Awaiting Command\nEND: Ends the current HEAPC command\nSTR *STRING*: Store the values between \"*\" onto the heap\nSTR-RLS #: Remove the specified string from the heap\nFNC #: Allocate function array for # of pointers\n", 212, 0);
+
+	while (1) {
+		// Get User Input
+		result = recv(Client, Rcv, 2048, 0);
+		
+		if (result == -1)
+			continue;
+		printf("%s", Rcv);
+		// 0 = End
+		if (strncmp(Rcv, "END ", 3) == 0) {
+			send(Client, "Thank You For using HEAPC\n", 26, 0);
+			break;
+		}
+		// 1 = Release String; Maybe STR-RLS #
+		else if (strncmp(Rcv, "STR-RLS ", 8) == 0) {
+			
+			if (Rcv[8] == '\0')
+				continue;
+
+			strncpy(trgt_str, Rcv + 8, 2);
+			s_index = atoi(trgt_str);
+
+			HeapFree(defaultHeap, 0, s_ptr[s_index]);
+		}
+		// 2 = Store String; Maybe STR *STRING*, returns index
+		else if ((result = strncmp(Rcv, "STR ", 4)) == 0) {
+
+			if (s_cnt > 20) {
+				send(Client, "We cannot store any additional strings\n", 39, 0);
+				continue;
+			}
+
+			// Look for first instance of '*'
+			for (s_index = 0; s_index < strlen(Rcv) && Rcv[s_index] != '*'; s_index++); // Notice the ; ...
+
+			// We did not find anything...
+			if (s_index == strlen(Rcv))
+				break;
+
+			// Unsafe Copying
+			e_index = 0;
+
+			// You can get rid of the e_index < HELPER_STR_SIZE check if you also want this vulnerable to a 
+			// local buffer overflow...
+			for (; e_index < HELPER_STR_SIZE && s_index++ < strlen(Rcv) && Rcv[s_index] != '*'; e_index++)
+				trgt_str[e_index] = Rcv[s_index];
+
+			// Put string on heap
+			s_ptr[s_cnt] = HeapAlloc(defaultHeap, 0, 80);
+			strcpy(s_ptr[s_cnt], trgt_str);
+
+			printf("ADDR %p\n", s_ptr[s_cnt]); // DEBUG
+
+			sprintf(trgt_str, "Thank you for saving your string it is located at %d\n", s_cnt);
+			send(Client, trgt_str, strlen(trgt_str), 0);
+			s_cnt++;
+		}
+		// 3 = Save Function List (How many); FNC #(Multiply it by 4) 
+		else if (strncmp(Rcv, "FNC ", 4) == 0) {
+			if (Rcv[4] == '\0') {
+				send(Client, "Please provide the index\n", 25, 0);
+				continue;
+			}
+			else if (p_cnt >= 20) {
+				send(Client, "Failure\n", 8, 0);
+				continue;
+			}
+			strncpy(trgt_str, Rcv + 4, HELPER_STR_SIZE);
+			//printf("%c\n", Rcv[5]);
+			s_index = atoi(trgt_str);
+
+
+			tmp_pnt = HeapAlloc(defaultHeap, 0, sizeof(functionpointer) * s_index);
+			for (int i = 0; i < s_index; i++) {
+				tmp_pnt[i] = good_function;
+			}
+			p_ptr[p_cnt++] = tmp_pnt;
+			printf("ADDR FNC %p\n", tmp_pnt); // DEBUG
+			send(Client, "Success\n", 8, 0);
+		}
+	}
+	if(p_cnt > 0)
+		Function8b(Rcv, p_ptr[--p_cnt][0]);
+	
+	send(Client, "Finished\n", 10, 0);
+	return;
+}
+
+void Function8b(char* Rcv, functionpointer ptr) {
+	char d_str[1000];
+	strncpy(d_str, Rcv, 1000);
+
+	ptr(100);
 	return;
 }
 
@@ -499,7 +753,7 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 				SendResult = send(Client, NotImplemented, sizeof(NotImplemented), 0);
 			}
 			else if (strncmp(RecvBuf, "HELP", 4) == 0) {
-				const char ValidCommands[251] = "Valid Commands:\nHELP\nSTATS [stat_value]\nRTIME [rtime_value]\nLTIME [ltime_value]\nSRUN [srun_value]\nTRUN [trun_value]\nGMON [gmon_value]\nGDOG [gdog_value]\nKSTET [kstet_value]\nGTER [gter_value]\nHTER [hter_value]\nLTER [lter_value]\nKSTAN [lstan_value]\nEXIT\n";
+				const char ValidCommands[291] = "Valid Commands:\nHELP\nSTATS [stat_value]\nRTIME [rtime_value]\nLTIME [ltime_value]\nSRUN [srun_value]\nTRUN [trun_value]\nGMON [gmon_value]\nGDOG [gdog_value]\nKSTET [kstet_value]\nGTER [gter_value]\nHTER [hter_value]\nLTER [lter_value]\nKSTAN [lstan_value]\nFUNCC [funcc value]\nHEAP *[heap value]*\nEXIT\n";
 				SendResult = send(Client, ValidCommands, sizeof(ValidCommands), 0);
 			}
 			else if (strncmp(RecvBuf, "STATS ", 6) == 0) {
@@ -546,7 +800,7 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 				  May perform "MITM" if enabled
 				************************************************/
 				printf("Received a message\r\n");
-				fflush(stdout);
+				//-fflush(stdout);
 
 				char* KnocBuf = malloc(3000);
 				memset(KnocBuf, 0, 3000);
@@ -567,8 +821,9 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 					char MITMStr[] = " hahaha...";
 					sprintf(KnocBuf, "%s %s", RecvBuf + 6, MITMStr);
 					printf("RecvBuf=%s\r\n", KnocBuf);
-					fflush(stdout);
+					//-fflush(stdout);
 				}
+				fflush(stdout);
 
 				broadcast(KnocBuf, pCli);
 
@@ -613,8 +868,51 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 				strncpy(FuncBuff, RecvBuf, 2048);
 				memset(RecvBuf, 0, DEFAULT_BUFLEN);
 				Function5(FuncBuff);
+				SendResult = send(Client, "FUNCC COMPLETE\n", 15, 0);
 				/************************************************
 				  End CFG Exploit Function
+				************************************************/
+			}
+			else if (strncmp(RecvBuf, "HEAC", 4) == 0) {
+				/************************************************
+				  Begin Heap Overflow Exploit Function
+				************************************************/
+				char* FuncBuff = malloc(2048);
+				memset(FuncBuff, 0, 2048);
+				strncpy(FuncBuff, RecvBuf, 2048);
+				memset(RecvBuf, 0, DEFAULT_BUFLEN);
+				Function8a(FuncBuff, Client);
+				SendResult = send(Client, "HEAPC COMPLETE\n", 15, 0);
+				/************************************************
+				  End Heap Overflow Exploit Function
+				************************************************/
+			}
+			else if (strncmp(RecvBuf, "HEAL", 4) == 0) {
+				/************************************************
+				  Begin Heap Overflow Exploit Function
+				************************************************/
+				char* FuncBuff = malloc(2048);
+				memset(FuncBuff, 0, 2048);
+				strncpy(FuncBuff, RecvBuf, 2048);
+				memset(RecvBuf, 0, DEFAULT_BUFLEN);
+				Function7(FuncBuff, Client);
+				SendResult = send(Client, "\nHEAL COMPLETE\n", 16, 0);
+				/************************************************
+				  End Heap Overflow Exploit Function
+				************************************************/
+			}
+			else if (strncmp(RecvBuf, "HEAP", 4) == 0) {
+				/************************************************
+				  Begin Heap Overflow Exploit Function
+				************************************************/
+				char* FuncBuff = malloc(2048);
+				memset(FuncBuff, 0, 2048);
+				strncpy(FuncBuff, RecvBuf, 2048);
+				memset(RecvBuf, 0, DEFAULT_BUFLEN);
+				Function6a(FuncBuff);
+				SendResult = send(Client, "FUNCC COMPLETE\n", 15, 0);
+				/************************************************
+				  End Heap Overflow Exploit Function
 				************************************************/
 			}
 			else if (strncmp(RecvBuf, "GMON ", 5) == 0) {
@@ -694,23 +992,30 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 			else if (strncmp(RecvBuf, "EXIT", 4) == 0) {
 				SendResult = send(Client, "GOODBYE\n", 8, 0);
 				printf("Connection closing...\r\n");
-				fflush(stdout);
+				//-fflush(stdout);
 				break; // Connection exits
 			}
+			/***************************************/
+			// Adde to allow cleaner user output
+			/***************************************/
+			else if (strncmp(RecvBuf, "\n", 1)) {}
+			/***************************************/
+			// Adde to allow cleaner user output
+			/***************************************/
 			else {
 				SendResult = send(Client, "UNKNOWN COMMAND\n", 16, 0);
 			}
 
 			if (SendResult == SOCKET_ERROR) {
 				printf("Send failed with error: %d\r\n", WSAGetLastError());
-				fflush(stdout);
+				//-fflush(stdout);
 				break;
 			}
 		}
 		else if (Result == 0) {
 			/* If the connection has been gracefully closed, the return value is zero. */
 			printf("Connection closing...\r\n");
-			fflush(stdout);
+			//-fflush(stdout);
 			break;
 		}
 		else {
@@ -721,7 +1026,7 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 
 			if (!end_flag) {
 				printf("Recv failed with error: %d\r\n", WSAGetLastError());
-				fflush(stdout);
+				//-fflush(stdout);
 			}
 			break;
 		}
@@ -744,10 +1049,14 @@ int main(int argc, char* argv[]) {
 	char PortNumber[6];	// Server port number
 	const char Usage[128] = "Wrong arguments!\nUsage: %s [port_number]\n\nIf no port number is provided, the default port of %s will be used.\n";
 	
+	/* Configure printf to not use buffer (Immediate write to pipe) */
+	//setvbuf(stdout, NULL, _IONBF, 0);
+
 	/* Configure based on CLI arguments */
 	if (argc > 2) {
 		// Too many command line arguments
 		printf(Usage, argv[0], DEFAULT_PORT);
+		fflush(stdout);
 		return 1;
 	}
 	else if (argc == 2) {
@@ -780,7 +1089,7 @@ int main(int argc, char* argv[]) {
 
 	/* Print info and ensure external dll is loaded */
 	printf("Starting vulnserver version %s\r\n", VERSION);
-	fflush(stdout);
+	//-fflush(stdout);
 	EssentialFunc1(); // Call function from external dll
 	printf("\nThis is vulnerable software! Do not run at production systems!\nDo NOT try Windows console CMD's Mark and Copy! It stalks server!\n\nCTRL+C to terminate server!\n\r\n");
 	fflush(stdout);

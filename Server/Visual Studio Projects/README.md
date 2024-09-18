@@ -1,6 +1,6 @@
 # Visual Studio Project
 
-This directory contains Visual Studio Projects that can be used to compile the `VChat.exe` and it's required `Essefunc.dll`.  The projects are contained in their respective directories [DLL](./DLL/README.md), and [EXE](./EXE/README.md). Contained within those directories is also a README file containing information on how to configure and setup the Visual Studio Project from Scratch. 
+This directory contains Visual Studio Projects that can be used to compile the `VChat.exe` and it's required dependency`Essefunc.dll`. The projects are contained in their respective directories [DLL](./DLL/README.md), and [EXE](./EXE/README.md). Contained within those directories is also a README file containing information on how to configure and setup the Visual Studio Project from Scratch. 
 
 
 ## Ref

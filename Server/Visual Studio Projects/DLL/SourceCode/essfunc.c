@@ -20,7 +20,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #include <stdio.h>
 #include <string.h>
 
-#define VERSION "2.0"
+#define VERSION "2.12"
 
 void EssentialFunc1() {
 	printf("Called essential function dll version %s\n", VERSION);

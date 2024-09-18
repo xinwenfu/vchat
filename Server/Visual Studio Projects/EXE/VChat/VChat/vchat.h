@@ -14,23 +14,33 @@
 Define Constants used to control
 default behavior and output.
 */
-#define VERSION "2.12"
+#define VERSION "2.20"
 #define DEFAULT_BUFLEN 4096
 #define DEFAULT_PORT "9999"
 #define MAX_CLIENTS 100
 
+/* 
+Define Constants used to control HEAP 
+overflow
+*/
+#define HELPER_STR_SIZE 1200
+#define CHUNK_SIZE 0x190
+#define ALLOC_COUNT 10
+#define ALLOC_FREE 6
+#define HEAPVULN
+
 /*
 Typedef for functionpointer
-This is a refernce for
+This is a reference for
 indirect jumps to functions
 with the signature void <name>(void);
 */
-typedef void (*funcionpointer)();
+typedef void (*functionpointer)();
 
 /* Structure used in CFG exploit */
 typedef struct {
 	char buff[800];
-	funcionpointer tgt_func;
+	functionpointer tgt_func;
 } function_auth;
 
 /* Client structure */
@@ -100,6 +110,12 @@ void Function2(char* Input);
 void Function3(char* Input);
 void Function4(char* Input);
 void Function5(char* Input);
+void Function6a(char* Input);
+void Function6b(char* Input, char* str_trgt, void** allocs, functionpointer* trgt);
+void Function7(char* Input, SOCKET client);
+void Function8a(char* Rcv, SOCKET client);
+void Function8b(char* Rcv, functionpointer ptr);
+
 void EssentialFunc1();
 
 /* Functions used for CFG overflow called by Function5 */
@@ -114,5 +130,12 @@ void good_function(char* Input, SOCKET client) {
 void bad_function(char* Input, SOCKET client) {
 	/* Send some data so the client knows we were successful */
 	send(client, "BAD FUNCTION CALLED\n", 20, 0);
+	return;
+}
+
+/* Utility Function for Heap Overflow */
+void fill_array(functionpointer* arr, functionpointer* ptr, unsigned size) {
+	for (int i = 0; i < size; i++)
+		arr[i] = ptr;
 	return;
 }
