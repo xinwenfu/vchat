@@ -1,0 +1,114 @@
+﻿  essfunc.c
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(31,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(32,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(32,7): error C2146: syntax error: missing ';' before identifier 'esp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(33,3): error C2065: 'esp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(33,3): error C2146: syntax error: missing ';' before identifier 'jmp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(33,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(33,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(34,3): error C2065: 'eax': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(34,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(34,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(34,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(35,3): error C2065: 'eax': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(35,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(35,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(35,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(36,3): error C2065: 'eax': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(36,3): error C2146: syntax error: missing ';' before identifier 'ret'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(37,2): error C2065: 'ret': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(37,2): error C2143: syntax error: missing ';' before '}'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(41,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(42,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(42,8): error C2059: syntax error: '%'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(51,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(61,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(71,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(80,23): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(81,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(82,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(82,7): error C2146: syntax error: missing ';' before identifier 'esp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(83,3): error C2065: 'esp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(83,3): error C2146: syntax error: missing ';' before identifier 'jmp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(83,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(83,7): error C2146: syntax error: missing ';' before identifier 'esi'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(84,3): error C2065: 'esi': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(84,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(84,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(84,7): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(85,3): error C2065: 'ecx': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(85,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(85,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(85,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(86,3): error C2065: 'eax': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(86,3): error C2146: syntax error: missing ';' before identifier 'ret'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(87,2): error C2065: 'ret': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(87,2): error C2143: syntax error: missing ';' before '}'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(91,23): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(92,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(93,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(93,7): error C2146: syntax error: missing ';' before identifier 'esp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(94,3): error C2065: 'esp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(94,3): error C2146: syntax error: missing ';' before identifier 'jmp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(94,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(94,7): error C2146: syntax error: missing ';' before identifier 'ebp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(95,3): error C2065: 'ebp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(95,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(95,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(95,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(96,3): error C2065: 'eax': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(96,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(96,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(96,7): error C2146: syntax error: missing ';' before identifier 'edx'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(97,3): error C2065: 'edx': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(97,3): error C2146: syntax error: missing ';' before identifier 'ret'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(98,2): error C2065: 'ret': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(98,2): error C2143: syntax error: missing ';' before '}'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(102,23): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(103,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(104,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(104,7): error C2146: syntax error: missing ';' before identifier 'esp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,3): error C2065: 'esp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,3): error C2146: syntax error: missing ';' before identifier 'jmp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,7): error C2146: syntax error: missing ';' before identifier 'esp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(106,3): error C2065: 'esp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(106,3): error C2146: syntax error: missing ';' before identifier 'jmp'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(106,7): error C2065: 'jmp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(106,8): error C2064: term does not evaluate to a function taking 0 arguments
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(106,14): error C2065: 'esp': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(107,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(107,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(107,7): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(108,3): error C2065: 'ecx': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(108,3): error C2146: syntax error: missing ';' before identifier 'pop'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(108,7): error C2065: 'pop': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(108,7): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(109,3): error C2065: 'ecx': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(109,3): error C2146: syntax error: missing ';' before identifier 'ret'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(110,2): error C2065: 'ret': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(110,2): error C2143: syntax error: missing ';' before '}'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(114,35): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(116,24): error C2065: 'Input': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(116,19): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(116,19): warning C4024: 'strcpy': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(119,35): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(121,24): error C2065: 'Input': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(121,19): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(121,19): warning C4024: 'strcpy': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(125,49): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(127,24): error C2065: 'Input': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(127,19): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(127,19): warning C4024: 'strcpy': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(128,21): error C2065: 'Status': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(128,9): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(128,9): warning C4313: 'printf': '%s' in format string conflicts with argument 1 of type 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(131,35): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(133,24): error C2065: 'Input': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(133,19): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(133,19): warning C4024: 'strcpy': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(136,35): error C2143: syntax error: missing ';' before '{'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(138,24): error C2065: 'Input': undeclared identifier
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(138,19): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(138,19): warning C4024: 'strcpy': different types for formal and actual parameter 2
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(140,1): error C1004: unexpected end-of-file found

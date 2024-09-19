@@ -1,0 +1,7 @@
+﻿  essfunc.c
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,3): warning C4410: illegal size for operand
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,3): warning C4409: illegal instruction size
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(53,1): warning C4731: 'EssentialFunc4': frame pointer register 'ebp' modified by inline assembly code
+D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(54,1): warning C4731: 'EssentialFunc4': frame pointer register 'ebp' modified by inline assembly code
+     Creating library D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Debug\libessfunc.a and object D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Debug\libessfunc.exp
+  Essfun.vcxproj -> D:\Fu-Work\VChat\vchat-dev\Server\Visual Studio Projects\DLL\Essfun\Debug\Essfun.dll
