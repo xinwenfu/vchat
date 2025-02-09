@@ -1,0 +1,9 @@
+﻿  essfunc.c
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,3): warning C4410: illegal size for operand
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(105,3): warning C4409: illegal instruction size
+     Creating library D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Release\libessfunc.a and object D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Release\libessfunc.exp
+  Generating code
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(53): warning C4731: 'EssentialFunc4': frame pointer register 'ebp' modified by inline assembly code
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Essfun\essfunc.c(54): warning C4731: 'EssentialFunc4': frame pointer register 'ebp' modified by inline assembly code
+  Finished generating code
+  Essfun.vcxproj -> D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\Server\Visual Studio Projects\DLL\Essfun\Release\Essfun.dll
