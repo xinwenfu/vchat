@@ -125,10 +125,10 @@ namespace VChatGUI {
 			this->Start_Button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Start_Button->ForeColor = System::Drawing::Color::White;
-			this->Start_Button->Location = System::Drawing::Point(913, 462);
+			this->Start_Button->Location = System::Drawing::Point(831, 462);
 			this->Start_Button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Start_Button->Name = L"Start_Button";
-			this->Start_Button->Size = System::Drawing::Size(169, 46);
+			this->Start_Button->Size = System::Drawing::Size(157, 46);
 			this->Start_Button->TabIndex = 0;
 			this->Start_Button->Text = L"Start Server";
 			this->Start_Button->UseVisualStyleBackColor = false;
@@ -149,7 +149,7 @@ namespace VChatGUI {
 			this->VChatOut->Multiline = true;
 			this->VChatOut->Name = L"VChatOut";
 			this->VChatOut->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->VChatOut->Size = System::Drawing::Size(1433, 416);
+			this->VChatOut->Size = System::Drawing::Size(1294, 416);
 			this->VChatOut->TabIndex = 2;
 			// 
 			// Stop_Button
@@ -160,10 +160,10 @@ namespace VChatGUI {
 			this->Stop_Button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Stop_Button->ForeColor = System::Drawing::Color::White;
-			this->Stop_Button->Location = System::Drawing::Point(1184, 464);
+			this->Stop_Button->Location = System::Drawing::Point(995, 464);
 			this->Stop_Button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Stop_Button->Name = L"Stop_Button";
-			this->Stop_Button->Size = System::Drawing::Size(169, 42);
+			this->Stop_Button->Size = System::Drawing::Size(150, 42);
 			this->Stop_Button->TabIndex = 4;
 			this->Stop_Button->Text = L"Stop Server";
 			this->Stop_Button->UseVisualStyleBackColor = false;
@@ -176,7 +176,7 @@ namespace VChatGUI {
 			this->InputPortLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->InputPortLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->InputPortLabel->Location = System::Drawing::Point(397, 471);
+			this->InputPortLabel->Location = System::Drawing::Point(371, 471);
 			this->InputPortLabel->Name = L"InputPortLabel";
 			this->InputPortLabel->Size = System::Drawing::Size(133, 29);
 			this->InputPortLabel->TabIndex = 5;
@@ -188,7 +188,7 @@ namespace VChatGUI {
 			this->VChatPort->BackColor = System::Drawing::SystemColors::ScrollBar;
 			this->VChatPort->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->VChatPort->Location = System::Drawing::Point(548, 468);
+			this->VChatPort->Location = System::Drawing::Point(504, 468);
 			this->VChatPort->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->VChatPort->MaxLength = 6;
 			this->VChatPort->Name = L"VChatPort";
@@ -215,7 +215,7 @@ namespace VChatGUI {
 			this->VChatPath->BackColor = System::Drawing::SystemColors::ScrollBar;
 			this->VChatPath->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->VChatPath->Location = System::Drawing::Point(231, 468);
+			this->VChatPath->Location = System::Drawing::Point(212, 468);
 			this->VChatPath->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->VChatPath->Name = L"VChatPath";
 			this->VChatPath->Size = System::Drawing::Size(152, 34);
@@ -229,7 +229,7 @@ namespace VChatGUI {
 			this->PortLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->PortLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->PortLabel->Location = System::Drawing::Point(684, 471);
+			this->PortLabel->Location = System::Drawing::Point(615, 471);
 			this->PortLabel->Name = L"PortLabel";
 			this->PortLabel->Size = System::Drawing::Size(132, 29);
 			this->PortLabel->TabIndex = 11;
@@ -241,7 +241,7 @@ namespace VChatGUI {
 			this->StatusBox->BackColor = System::Drawing::Color::Red;
 			this->StatusBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->StatusBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
-			this->StatusBox->Location = System::Drawing::Point(1094, 466);
+			this->StatusBox->Location = System::Drawing::Point(1152, 466);
 			this->StatusBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->StatusBox->Name = L"StatusBox";
 			this->StatusBox->Size = System::Drawing::Size(72, 38);
@@ -253,7 +253,7 @@ namespace VChatGUI {
 			this->PortBox->BackColor = System::Drawing::SystemColors::ScrollBar;
 			this->PortBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->PortBox->Location = System::Drawing::Point(830, 468);
+			this->PortBox->Location = System::Drawing::Point(745, 468);
 			this->PortBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PortBox->Name = L"PortBox";
 			this->PortBox->Size = System::Drawing::Size(69, 34);
@@ -266,7 +266,7 @@ namespace VChatGUI {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(1385, 465);
+			this->button1->Location = System::Drawing::Point(1243, 465);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(72, 41);
 			this->button1->TabIndex = 14;
@@ -281,7 +281,7 @@ namespace VChatGUI {
 			this->AutoSize = true;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->ClientSize = System::Drawing::Size(1491, 564);
+			this->ClientSize = System::Drawing::Size(1352, 564);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->PortBox);
 			this->Controls->Add(this->StatusBox);

@@ -1,2 +1,13 @@
-﻿  ServerManager.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  ServerManager.cpp
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\ServerManager.cpp(121,2): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\ServerManager.cpp(122,2): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\ServerManager.cpp(117,2): warning C4996: 'mbstowcs': This function or variable may be unsafe. Consider using mbstowcs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\ServerManager.cpp(118,2): warning C4996: 'mbstowcs': This function or variable may be unsafe. Consider using mbstowcs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\ServerManager.cpp(121,8): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\ServerManager.cpp(122,8): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  VChatGUI.cpp
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\VChatGUI.cpp(11,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  ServerManager.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   VChat_GUI.vcxproj -> D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\x64\Release\VChat_GUI.exe
