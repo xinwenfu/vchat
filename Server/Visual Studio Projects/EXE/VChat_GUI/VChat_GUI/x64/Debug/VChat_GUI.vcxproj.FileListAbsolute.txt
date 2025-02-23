@@ -1,0 +1,3 @@
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\x64\Debug\VChat_GUI.vcxproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\x64\Debug\VChatGUI.VChatGUI.resources
+D:\OneDrive\OneDrive - University of Massachusetts Lowell - UMass Lowell\fxw\UML\Classes\MalwareAnalysis\vchat\VChat_GUI\VChat_GUI\x64\Debug\VChat_GUI.vcxproj.GenerateResource.cache

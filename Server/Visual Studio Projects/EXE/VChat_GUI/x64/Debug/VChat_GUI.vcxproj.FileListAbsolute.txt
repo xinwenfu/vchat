@@ -1,0 +1,6 @@
+C:\Local-Git\VChatGUI\SRC\VChat_GUI\VChat_GUI\x64\Debug\VChat_GUI.vcxproj.AssemblyReference.cache
+C:\Local-Git\VChatGUI\SRC\VChat_GUI\VChat_GUI\x64\Debug\VChatGUI.VChatGUI.resources
+C:\Local-Git\VChatGUI\SRC\VChat_GUI\VChat_GUI\x64\Debug\VChat_GUI.vcxproj.GenerateResource.cache
+D:\Fu-Work\VChat\VChatGUI\SRC\VChat_GUI\VChat_GUI\x64\Debug\VChat_GUI.vcxproj.AssemblyReference.cache
+D:\Fu-Work\VChat\VChatGUI\SRC\VChat_GUI\VChat_GUI\x64\Debug\VChatGUI.VChatGUI.resources
+D:\Fu-Work\VChat\VChatGUI\SRC\VChat_GUI\VChat_GUI\x64\Debug\VChat_GUI.vcxproj.GenerateResource.cache
