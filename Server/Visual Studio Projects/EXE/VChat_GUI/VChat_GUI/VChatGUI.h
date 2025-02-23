@@ -176,7 +176,7 @@ namespace VChatGUI {
 			this->InputPortLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->InputPortLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->InputPortLabel->Location = System::Drawing::Point(371, 471);
+			this->InputPortLabel->Location = System::Drawing::Point(370, 471);
 			this->InputPortLabel->Name = L"InputPortLabel";
 			this->InputPortLabel->Size = System::Drawing::Size(133, 29);
 			this->InputPortLabel->TabIndex = 5;
@@ -188,7 +188,7 @@ namespace VChatGUI {
 			this->VChatPort->BackColor = System::Drawing::SystemColors::ScrollBar;
 			this->VChatPort->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->VChatPort->Location = System::Drawing::Point(504, 468);
+			this->VChatPort->Location = System::Drawing::Point(506, 468);
 			this->VChatPort->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->VChatPort->MaxLength = 6;
 			this->VChatPort->Name = L"VChatPort";
@@ -203,7 +203,7 @@ namespace VChatGUI {
 			this->ExeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ExeLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->ExeLabel->Location = System::Drawing::Point(31, 471);
+			this->ExeLabel->Location = System::Drawing::Point(26, 471);
 			this->ExeLabel->Name = L"ExeLabel";
 			this->ExeLabel->Size = System::Drawing::Size(182, 29);
 			this->ExeLabel->TabIndex = 7;
@@ -215,7 +215,7 @@ namespace VChatGUI {
 			this->VChatPath->BackColor = System::Drawing::SystemColors::ScrollBar;
 			this->VChatPath->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->VChatPath->Location = System::Drawing::Point(212, 468);
+			this->VChatPath->Location = System::Drawing::Point(214, 468);
 			this->VChatPath->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->VChatPath->Name = L"VChatPath";
 			this->VChatPath->Size = System::Drawing::Size(152, 34);
@@ -253,7 +253,7 @@ namespace VChatGUI {
 			this->PortBox->BackColor = System::Drawing::SystemColors::ScrollBar;
 			this->PortBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->PortBox->Location = System::Drawing::Point(745, 468);
+			this->PortBox->Location = System::Drawing::Point(753, 468);
 			this->PortBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PortBox->Name = L"PortBox";
 			this->PortBox->Size = System::Drawing::Size(69, 34);
