@@ -163,7 +163,7 @@ namespace VChatGUI {
 			this->Stop_Button->Location = System::Drawing::Point(995, 464);
 			this->Stop_Button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Stop_Button->Name = L"Stop_Button";
-			this->Stop_Button->Size = System::Drawing::Size(150, 42);
+			this->Stop_Button->Size = System::Drawing::Size(158, 42);
 			this->Stop_Button->TabIndex = 4;
 			this->Stop_Button->Text = L"Stop Server";
 			this->Stop_Button->UseVisualStyleBackColor = false;
@@ -241,7 +241,7 @@ namespace VChatGUI {
 			this->StatusBox->BackColor = System::Drawing::Color::Red;
 			this->StatusBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->StatusBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
-			this->StatusBox->Location = System::Drawing::Point(1152, 466);
+			this->StatusBox->Location = System::Drawing::Point(1159, 466);
 			this->StatusBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->StatusBox->Name = L"StatusBox";
 			this->StatusBox->Size = System::Drawing::Size(72, 38);
