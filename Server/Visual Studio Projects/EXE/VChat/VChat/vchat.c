@@ -1039,8 +1039,8 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 
 	/* Clean up socket and buffers */
 	closesocket(Client);
-	free(RecvBuf);
-	free(GdogBuf);
+	// free(RecvBuf); // intential no free
+	// free(GdogBuf); // intential no free
 	return 1;
 }
 
