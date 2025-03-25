@@ -1039,8 +1039,8 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 
 	/* Clean up socket and buffers */
 	closesocket(Client);
-	// free(RecvBuf); // intential no free
-	// free(GdogBuf); // intential no free
+	// free(RecvBuf); // comment out for intential errors
+	// free(GdogBuf); // comment out for intential errors
 	return 1;
 }
 
@@ -1088,7 +1088,7 @@ int main(int argc, char* argv[]) {
 
 
 	/* Print info and ensure external dll is loaded */
-	printf("Starting vulnserver version %s\r\n", VERSION);
+	printf("Starting vulnerable chat server version %s\r\n", VERSION);
 	//-fflush(stdout);
 	EssentialFunc1(); // Call function from external dll
 	printf("\nThis is vulnerable software! Do not run at production systems!\nDo NOT try Windows console CMD's Mark and Copy! It stalks server!\n\nCTRL+C to terminate server!\n\r\n");
