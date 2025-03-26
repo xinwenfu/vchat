@@ -735,7 +735,7 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 
 	/* Catch error if one occurs */
 	if (SendResult == SOCKET_ERROR) {
-		printf("Send failed with error: %d\r\n", WSAGetLastError());
+		printf("Welcome: User %s send fail with error: %d\r\n", pCli->name, WSAGetLastError());
 		fflush(stdout);
 		closesocket(Client);
 		return 1;
@@ -1007,7 +1007,7 @@ DWORD WINAPI ConnectionHandler(LPVOID cli) {
 			}
 
 			if (SendResult == SOCKET_ERROR) {
-				printf("Send failed with error: %d\r\n", WSAGetLastError());
+				printf("Cmd: User %s send failed with error: %d\r\n", pCli->name, WSAGetLastError());
 				//-fflush(stdout);
 				break;
 			}
