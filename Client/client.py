@@ -33,7 +33,7 @@ ADDRESS = (SERVER, PORT)
 FORMAT = "utf-8"
 
 # Regular expression used to validate the IPv4 address user entered is valid
-IPV4_REGEX = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
+IPV4_REGEX = r"^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
 # Create a new client socket and connect to the server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -437,3 +437,4 @@ class GUI:
 
 # create a GUI class object
 g = GUI()
+
